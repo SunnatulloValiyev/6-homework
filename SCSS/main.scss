@@ -64,23 +64,14 @@
 }
 
 
-.photos{
 
-    .trucking-image{
-    max-width: 635px;
-    max-height: 505px;
-    width: 100%;
-    height: 100%;
-    width: 635px;
-    height: 505px;
-    }
-}
 
 .square {
     display: flex;
     justify-content: space-between;
     align-items: stretch; 
-    padding: 30px ;
+    padding: 30px;
+    margin-bottom: 50px;
     max-width: 1190px;
     background-color: #ffffff;
     border-radius: 20px;
@@ -154,3 +145,59 @@
 .building img, .device img, .box img{
     height: 40px; 
 }
+
+
+// .trucking-image {
+//     max-width: 1240px;
+// }
+
+.total {
+    display: flex;
+    justify-content: space-around; 
+}
+
+.dolor {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+    .shop {
+        @include circular-icon()
+    }
+
+    h4 {
+        font-family: 'Exo 2', sans-serif;
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    p {
+        max-width: 291px;
+        width: 100%;
+        font-family: 'PT Sans', sans-serif;
+        font-weight: 400;
+        color: #6B6B6C;
+        line-height: 24px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .trak {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-1 {
+        font-size: 1.5em;
+    }
+
+    .text-2 {
+        font-size: 1em;
+        margin-top: 10px;
+    }
+
+    .img-h3 a {
+        font-size: 1.2em;
+    }
+}
+
