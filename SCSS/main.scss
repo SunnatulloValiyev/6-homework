@@ -1,0 +1,156 @@
+@import './fonts';
+@import './normalize';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+
+    .trak {
+        max-width: 1240px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 60px 10px;
+
+        .text-1 {
+            font-weight: 600;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 52px; 
+            line-height: 65px;
+        }
+        
+        .text-2 {
+            margin-top: 20px;
+            color: #6B6B6C;
+            font-family: "PT sans", sans-serif;
+            width: 560px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+    }
+
+
+}
+
+.img-h3 {
+    font-family: "PT sans", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 8px; 
+    margin-top: 20px;
+    cursor: pointer;
+
+    a {
+        color: #232222;
+        text-decoration: none;
+        transition: all 0.6s ease;
+    }
+
+    a:hover {
+        color: #6B6B6C;
+    } 
+}
+
+
+.photos{
+
+    .trucking-image{
+    max-width: 635px;
+    max-height: 505px;
+    width: 100%;
+    height: 100%;
+    width: 635px;
+    height: 505px;
+    }
+}
+
+.square {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; 
+    padding: 30px ;
+    max-width: 1190px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    -webkit-box-shadow: 5px 5px 42px 22px rgba(235,235,235,1);
+    -moz-box-shadow: 5px 5px 42px 22px rgba(235,235,235,1);
+    box-shadow: 5px 5px 42px 22px rgba(235,235,235,1);
+}   
+
+
+.square > div {
+    flex-grow: 1;
+}
+
+
+@mixin container-styles {
+    max-width: 250px;
+    max-height: 245px;
+    line-height: 20px;
+    margin: 0 auto;
+    padding-inline: 20px;
+    
+    .text-3, .text-5 {
+        font-weight: 600;
+        font-family: 'Exo 2', sans-serif;
+        font-size: 20px;
+        line-height: 27px;
+        width: 258px;
+        margin-bottom: 20px;
+    }
+
+    .text-4, .text-6 {
+        font-family: 'PT Sans', sans-serif;
+        width: 225px;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.line {
+    max-width: 1px;
+    background-color: #D7D7DD;
+}
+
+@mixin circular-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E9E9EC;
+    border-radius: 50%; 
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.build {
+    @include container-styles;
+}
+
+.crane {
+    @include container-styles;
+}
+
+.boxs {
+    @include container-styles;
+}
+
+.building, .device, .box {
+    @include circular-icon;
+}
+
+.building img, .device img, .box img{
+    height: 40px; 
+}
