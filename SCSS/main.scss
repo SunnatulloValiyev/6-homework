@@ -22,10 +22,10 @@
         .text-1 {
             font-weight: 600;
             font-family: 'Exo 2', sans-serif;
-            font-size: 52px; 
+            font-size: 52px;
             line-height: 65px;
         }
-        
+
         .text-2 {
             margin-top: 20px;
             color: #6B6B6C;
@@ -35,10 +35,7 @@
             font-size: 16px;
             line-height: 24px;
         }
-
     }
-
-
 }
 
 .img-h3 {
@@ -48,7 +45,7 @@
     line-height: 24px;
     display: inline-flex;
     flex-direction: column;
-    gap: 8px; 
+    gap: 8px;
     margin-top: 20px;
     cursor: pointer;
 
@@ -60,31 +57,24 @@
 
     a:hover {
         color: #6B6B6C;
-    } 
+    }
 }
-
-
-
 
 .square {
     display: flex;
     justify-content: space-between;
-    align-items: stretch; 
+    align-items: stretch;
     padding: 30px;
     margin-bottom: 50px;
     max-width: 1190px;
     background-color: #ffffff;
     border-radius: 20px;
-    -webkit-box-shadow: 5px 5px 42px 22px rgba(235,235,235,1);
-    -moz-box-shadow: 5px 5px 42px 22px rgba(235,235,235,1);
-    box-shadow: 5px 5px 42px 22px rgba(235,235,235,1);
-}   
-
+    box-shadow: 5px 5px 42px 22px rgba(235, 235, 235, 1);
+}
 
 .square > div {
     flex-grow: 1;
 }
-
 
 @mixin container-styles {
     max-width: 250px;
@@ -92,7 +82,7 @@
     line-height: 20px;
     margin: 0 auto;
     padding-inline: 20px;
-    
+
     .text-3, .text-5 {
         font-weight: 600;
         font-family: 'Exo 2', sans-serif;
@@ -120,7 +110,7 @@
     align-items: center;
     justify-content: center;
     background-color: #E9E9EC;
-    border-radius: 50%; 
+    border-radius: 50%;
     width: 80px;
     height: 80px;
     margin-bottom: 20px;
@@ -142,26 +132,22 @@
     @include circular-icon;
 }
 
-.building img, .device img, .box img{
-    height: 40px; 
+.building img, .device img, .box img {
+    height: 40px;
 }
-
-
-// .trucking-image {
-//     max-width: 1240px;
-// }
 
 .total {
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
 }
 
 .dolor {
     display: flex;
     gap: 40px;
     margin-bottom: 40px;
+
     .shop {
-        @include circular-icon()
+        @include circular-icon();
     }
 
     h4 {
@@ -181,23 +167,122 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+
     .trak {
         flex-direction: column;
         align-items: center;
+
+        .text-1 {
+            font-size: 42px;
+            line-height: 55px;
+            text-align: center;
+        }
+
+        .text-2 {
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
     }
 
-    .text-1 {
-        font-size: 1.5em;
+    .trucking-image {
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        margin-bottom: 20px;
     }
 
-    .text-2 {
-        font-size: 1em;
-        margin-top: 10px;
+    .square {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        max-width: 90%;  
     }
 
-    .img-h3 a {
-        font-size: 1.2em;
+    .dolor {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
     }
 }
 
+@media (max-width: 768px) {
+    .trak .text-1 {
+        font-size: 36px;
+        line-height: 48px;
+        text-align: center;
+    }
+
+    .dolor {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .img-h3 {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .square {
+        padding: 15px;
+        max-width: 100%;
+        box-shadow: none; 
+    }
+}
+
+@media (max-width: 576px) {
+    .trak {
+        align-items: center;
+
+        .text-1 {
+            font-size: 28px;
+            line-height: 38px;
+            text-align: center;
+        }
+
+        .text-2 {
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+        }
+    }
+
+    .trucking-image {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .square {
+        padding: 15px;
+        margin-bottom: 30px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .dolor h4 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .dolor p {
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+    }
+
+    .total {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
